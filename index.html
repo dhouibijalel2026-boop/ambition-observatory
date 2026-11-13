@@ -117,7 +117,6 @@ body.dark-mode .form-group label { color: #85c1e9; }
 
 #qrcode, #poster-qrcode { display: flex; justify-content: center; margin: 15px 0; }
 
-/* تصميم ملصق الطباعة */
 .poster-box {
   border: 4px double var(--primary); border-radius: 18px; padding: 30px;
   text-align: center; background: #ffffff; color: #1a5276; max-width: 550px; margin: 20px auto;
@@ -362,35 +361,38 @@ body.dark-mode .form-group label { color: #85c1e9; }
   <section id="teacher-page" class="page">
     <div class="card">
       <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
-        <h2>🔒 لوحة الإشراف والتحليل (الأستاذ جلال ذويبي)</h2>
+        <h2>🔒 لوحة الإشراف والتحليل الإحصائي (الأستاذ جلال ذويبي)</h2>
         <button class="btn btn-secondary" onclick="switchTab('home-page', document.querySelectorAll('nav button')[0])">خروج</button>
       </div>
+      <p style="color:#666; margin-top:5px;">لوحة تحكم شاملة لمتابعة إحصائيات التلاميذ، مراجعة الأفكار والمشاريع، وتحدارة الأنشطة بكفاءة.</p>
 
+      <!-- أزرار الإشراف والتحكم في المرفقات -->
       <div style="margin: 20px 0; display:flex; gap:10px; flex-wrap:wrap;" class="no-print">
-        <button class="btn btn-accent" onclick="openPosterModal()">🖨️ إنشاء ملصق QR للطباعة</button>
-        <button class="btn" onclick="window.print()">📄 طباعة التقرير التحليلي</button>
+        <button class="btn btn-accent" onclick="openPosterModal()">🖨️ إنشاء ملصق QR للطباعة والتعليق</button>
+        <button class="btn" onclick="window.print()">📄 طباعة التقرير التحليلي الشامل</button>
+        <button class="btn btn-success" onclick="alert('ركن إدارة المرفقات والوسائط (صور وفيديوهات الورشات): جاهز للربط والتخزين الميداني.')">📁 إدارة مرفقات الأنشطة والوسائط</button>
         <button class="btn btn-danger" onclick="clearAllData()">🗑️ تهيئة كافة البيانات</button>
       </div>
 
       <div class="grid-3" style="margin:20px 0;">
         <div class="stat-box">
           <div class="stat-num" id="t-stat-total">0</div>
-          <small>إجمالي المستجوبين</small>
+          <small>إجمالي المستجوبين في المرصد</small>
         </div>
         <div class="stat-box">
           <div class="stat-num" style="color:var(--success);" id="t-stat-stem-rate">0%</div>
-          <small>نسبة الميل للعلوم</small>
+          <small>نسبة الميل نحو المسارات العلمية</small>
         </div>
         <div class="stat-box">
           <div class="stat-num" style="color:var(--accent);" id="t-stat-ideas-count">0</div>
-          <small>الأفكار المقدمة</small>
+          <small>الأفكار والابتكارات المقدمة</small>
         </div>
       </div>
 
-      <h3>📊 تفصيل آراء وميولات التلاميذ:</h3>
+      <h3>📊 تفصيل آراء وميولات التلاميذ المسجلة:</h3>
       <div style="background:var(--bg); padding:15px; border-radius:10px; margin-bottom:20px;" id="survey-analytics-breakdown"></div>
 
-      <h3>📥 قائمة أفكار ومشاريع التلاميذ الواردة للحاضنة:</h3>
+      <h3>📥 قائمة الأفكار والمشاريع الواردة لحاضنة النادي العلمي:</h3>
       <div id="teacher-ideas-list" style="background:var(--bg); padding:15px; border-radius:10px;"></div>
     </div>
   </section>
@@ -481,7 +483,6 @@ function addPoints(pts) {
   studentProfile.points = (studentProfile.points || 0) + pts;
   localStorage.setItem('ambition_student_v2', JSON.stringify(studentProfile));
 
-  // تحديث لوحة الشرف
   let existing = leaderboard.find(item => item.name === studentProfile.name && item.classInfo === (studentProfile.level + " " + studentProfile.classNum));
   if(existing) {
     existing.points = studentProfile.points;
@@ -533,13 +534,11 @@ function updateUI() {
   document.getElementById('disp-class').innerText = studentProfile.name ? (studentProfile.level + " " + studentProfile.classNum) : "القسم غير محدد";
   document.getElementById('disp-rank').innerText = `${rank} (${pts} نقطة)`;
 
-  // تحديث الأوسمة التلقائية
   document.getElementById('badge-1').classList.toggle('unlocked', pts >= 10);
   document.getElementById('badge-2').classList.toggle('unlocked', pts >= 40);
   document.getElementById('badge-3').classList.toggle('unlocked', pts >= 90);
   document.getElementById('badge-4').classList.toggle('unlocked', pts >= 120);
 
-  // المؤشرات
   document.getElementById('home-stat-total').innerText = surveyRecords.length;
   let stemCount = surveyRecords.filter(s => s.orientation.includes("نعم")).length;
   let stemRate = surveyRecords.length > 0 ? Math.round((stemCount / surveyRecords.length) * 100) : 0;
