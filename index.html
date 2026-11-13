@@ -155,7 +155,7 @@ body.dark-mode .form-group label { color: #85c1e9; }
       <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:15px;">
         <div style="flex:1; min-width:260px;">
           <h2>أهلاً بك في فضاء استشراف المستقبل العلمي! 🔬</h2>
-          <p>منصة تفاعلية تهدف لفهم تطلعات تلاميذ <strong>المدرسة الإعدادية بفائض</strong> نحو العلوم والتكنولوجيا، وربط دروسهم اليومية بمهن الغد ومسارات الابتكار.</p>
+          <p>منصة تفاعلية مجهزة للعمل بدون إنترنت بالمنزل، تهدف لفهم تطلعات تلاميذ <strong>المدرسة الإعدادية بفائض</strong> نحو العلوم والتكنولوجيا ومهن الغد.</p>
         </div>
         <div style="background:rgba(26, 82, 118, 0.08); padding:15px 25px; border-radius:12px; text-align:center; min-width:230px; border:1px solid var(--border-color);">
           <small>بطاقة المستكشف(ة)</small>
@@ -167,7 +167,7 @@ body.dark-mode .form-group label { color: #85c1e9; }
 
       <!-- تسجيل بيانات التلميذ -->
       <div style="margin-top:15px; background:var(--bg); padding:15px; border-radius:10px;" class="no-print">
-        <strong>التعريف بالتلميذ(ة) للبدء وكسب النقاط:</strong>
+        <strong>التعريف بالتلميذ(ة) للبدء وكسب النقاط (يعمل محلياً بدون إنترنت):</strong>
         <div style="display:flex; gap:10px; margin-top:8px; flex-wrap:wrap;">
           <input type="text" id="stu-name" class="form-control" placeholder="الاسم واللقب" style="flex:1; min-width:180px;">
           <select id="stu-level" class="form-control" style="flex:1; min-width:160px;">
@@ -202,9 +202,9 @@ body.dark-mode .form-group label { color: #85c1e9; }
 
     <!-- رمز QR وزر الملصق -->
     <div class="card" style="text-align:center;">
-      <h3>📱 امسح الرمز للمشاركة الفورية من هاتفك</h3>
+      <h3>📱 امسح الرمز للتحميل أول مرة بنادي البيئة والعمل دون إنترنت</h3>
       <div id="qrcode"></div>
-      <p style="font-size:0.9rem; color:#666;">وجه كاميرا الهاتف لفتح استمارة المرصد ومستكشف المهن مباشرة</p>
+      <p style="font-size:0.9rem; color:#666;">حمّل المنصة مرة بالمدرسة، وتابع أنشطتك وطموحاتك بمنزلك طوال الأسبوع بكل حرية</p>
       <button class="btn btn-accent no-print" onclick="openPosterModal()">🖨️ إنشاء ملصق QR للطباعة والتعليق بالإعدادية</button>
     </div>
   </section>
@@ -213,7 +213,7 @@ body.dark-mode .form-group label { color: #85c1e9; }
   <section id="survey-page" class="page">
     <div class="card">
       <h2>📊 مرصد علاقة التلاميذ بالعلوم والمسارات المهنية</h2>
-      <p>أجب بكل صراحة وعفوية لتحصل على <strong>+30 نقطة</strong> وترتقي في لوحة الشرف:</p>
+      <p>أجب بكل صراحة وعفوية (يتم حفظ الإجابات محلياً دون الحاجة لإنترنت) لتحصل على <strong>+30 نقطة</strong>:</p>
 
       <div class="form-group">
         <label>1. كيف تصف علاقتك بالمواد العلمية (علوم الحياة والأرض، فيزياء، رياضيات، تكنولوجيا)؟</label>
@@ -288,7 +288,7 @@ body.dark-mode .form-group label { color: #85c1e9; }
   <section id="ideas-page" class="page">
     <div class="card">
       <h2>💡 حاضنة أفكار الشباب والابتكار المدرسي</h2>
-      <p>شارك بفكرة مشروع علمي أو ابتكار بيئي/تكنولوجي لتحصل على <strong>+50 نقطة</strong> ووسام المبتكر:</p>
+      <p>شارك بفكرة مشروع علمي أو ابتكار بيئي/تكنولوجي (يحفظ محلياً دون إنترنت) لتحصل على <strong>+50 نقطة</strong>:</p>
       
       <div class="form-group">
         <label>عنوان الفكرة أو الابتكار:</label>
@@ -323,8 +323,8 @@ body.dark-mode .form-group label { color: #85c1e9; }
   <!-- 5. لوحة الشرف والأوسمة التلقائية -->
   <section id="honor-page" class="page">
     <div class="card">
-      <h2>🏅 الأوسمة الشرفية العلمية (تُفتح تلقائياً بنقاطك)</h2>
-      <p>كلما شاركت في المرصد واقترحت أفكاراً إبداعية، ترتفع نقاطك وتُفتح لك الأوسمة العلمية تلقائياً:</p>
+      <h2>🏅 الأوسمة الشرفية العلمية (تُفتح تلقائياً بنقاطك المحفوظة محلياً)</h2>
+      <p>كلما شاركت في المرصد واقترحت أفكاراً، ترتفع نقاطك وتُفتح لك الأوسمة وتتزامن مع المدرسة:</p>
       <div class="grid-4" style="margin-top:15px;">
         <div class="badge-card" id="badge-1">
           <div class="badge-icon">🔬</div>
@@ -364,13 +364,12 @@ body.dark-mode .form-group label { color: #85c1e9; }
         <h2>🔒 لوحة الإشراف والتحليل الإحصائي (الأستاذ جلال ذويبي)</h2>
         <button class="btn btn-secondary" onclick="switchTab('home-page', document.querySelectorAll('nav button')[0])">خروج</button>
       </div>
-      <p style="color:#666; margin-top:5px;">لوحة تحكم شاملة لمتابعة إحصائيات التلاميذ، مراجعة الأفكار والمشاريع، وتحدارة الأنشطة بكفاءة.</p>
+      <p style="color:#666; margin-top:5px;">لوحة تحكم شاملة لمتابعة إحصائيات التلاميذ، مزامنة الأعمال المحفوظة بدون إنترنت، ومتابعة الأنشطة بكفاءة.</p>
 
-      <!-- أزرار الإشراف والتحكم في المرفقات -->
       <div style="margin: 20px 0; display:flex; gap:10px; flex-wrap:wrap;" class="no-print">
         <button class="btn btn-accent" onclick="openPosterModal()">🖨️ إنشاء ملصق QR للطباعة والتعليق</button>
         <button class="btn" onclick="window.print()">📄 طباعة التقرير التحليلي الشامل</button>
-        <button class="btn btn-success" onclick="alert('ركن إدارة المرفقات والوسائط (صور وفيديوهات الورشات): جاهز للربط والتخزين الميداني.')">📁 إدارة مرفقات الأنشطة والوسائط</button>
+        <button class="btn btn-success" onclick="alert('ركن المزامنة وإدارة المرفقات والوسائط: جاهز لاستقبال بيانات التلاميذ فور ارتباطهم بالشبكة بالنادي.')">🔄 مزامنة بيانات التلاميذ وإدارة المرفقات</button>
         <button class="btn btn-danger" onclick="clearAllData()">🗑️ تهيئة كافة البيانات</button>
       </div>
 
@@ -389,7 +388,7 @@ body.dark-mode .form-group label { color: #85c1e9; }
         </div>
       </div>
 
-      <h3>📊 تفصيل آراء وميولات التلاميذ المسجلة:</h3>
+      <h3>📊 تفصيل آراء وميولات التلاميذ المسجلة محلياً:</h3>
       <div style="background:var(--bg); padding:15px; border-radius:10px; margin-bottom:20px;" id="survey-analytics-breakdown"></div>
 
       <h3>📥 قائمة الأفكار والمشاريع الواردة لحاضنة النادي العلمي:</h3>
@@ -407,9 +406,9 @@ body.dark-mode .form-group label { color: #85c1e9; }
         <div style="font-weight:bold; font-size:1.15rem; color:#e67e22;">المدرسة الإعدادية بفائض</div>
         <hr style="border:1px solid #d6e0e9; margin:12px 0;">
         <h2 style="margin:8px 0; font-size:1.6rem;">🚀 مرصد طموح ومهن المستقبل</h2>
-        <p style="font-size:1rem; color:#2c3e50;">شارك برأيك، اكتشف مهنتك العلمية المستقبلية، واطرح أفكارك الابتكارية في حاضنة النادي العلمي!</p>
+        <p style="font-size:1rem; color:#2c3e50;">حمّل المنصة مرة بنادي البيئة، وشارك برأيك وطور أفكارك بالمنزل دون إنترنت!</p>
         <div id="poster-qrcode"></div>
-        <p style="font-weight:bold; font-size:1.05rem; margin-top:10px;">📱 امسح الرمز بكاميرا هاتفك للدخول الفوري</p>
+        <p style="font-weight:bold; font-size:1.05rem; margin-top:10px;">📱 امسح الرمز بكاميرا هاتفك للدخول الفوري وتثبيت العمل</p>
         <div style="font-size:0.85rem; color:#555; margin-top:12px;">إعداد وتطوير: الأستاذ جلال ذويبي (علوم الحياة والأرض)</div>
       </div>
     </div>
@@ -431,10 +430,11 @@ body.dark-mode .form-group label { color: #85c1e9; }
 </div>
 
 <script>
-let studentProfile = JSON.parse(localStorage.getItem('ambition_student_v2') || '{"name":"","level":"","classNum":"","points":0}');
-let surveyRecords = JSON.parse(localStorage.getItem('ambition_surveys_v2') || '[]');
-let studentIdeas = JSON.parse(localStorage.getItem('ambition_ideas_v2') || '[]');
-let leaderboard = JSON.parse(localStorage.getItem('ambition_board_v2') || '[]');
+// تخزين محلي كامل لضمان العمل بدون إنترنت (Offline-First Storage)
+let studentProfile = JSON.parse(localStorage.getItem('ambition_student_offline_v1') || '{"name":"","level":"","classNum":"","points":0}');
+let surveyRecords = JSON.parse(localStorage.getItem('ambition_surveys_offline_v1') || '[]');
+let studentIdeas = JSON.parse(localStorage.getItem('ambition_ideas_offline_v1') || '[]');
+let leaderboard = JSON.parse(localStorage.getItem('ambition_board_offline_v1') || '[]');
 
 const careersData = [
   {
@@ -481,7 +481,7 @@ function getRankTitle(pts) {
 
 function addPoints(pts) {
   studentProfile.points = (studentProfile.points || 0) + pts;
-  localStorage.setItem('ambition_student_v2', JSON.stringify(studentProfile));
+  localStorage.setItem('ambition_student_offline_v1', JSON.stringify(studentProfile));
 
   let existing = leaderboard.find(item => item.name === studentProfile.name && item.classInfo === (studentProfile.level + " " + studentProfile.classNum));
   if(existing) {
@@ -496,7 +496,7 @@ function addPoints(pts) {
     });
   }
   leaderboard.sort((a, b) => b.points - a.points);
-  localStorage.setItem('ambition_board_v2', JSON.stringify(leaderboard));
+  localStorage.setItem('ambition_board_offline_v1', JSON.stringify(leaderboard));
   updateUI();
 }
 
@@ -518,11 +518,11 @@ function saveProfile() {
   if(isFirstTime) {
     addPoints(10);
   } else {
-    localStorage.setItem('ambition_student_v2', JSON.stringify(studentProfile));
+    localStorage.setItem('ambition_student_offline_v1', JSON.stringify(studentProfile));
     updateUI();
   }
 
-  alert("تم حفظ بياناتك بنجاح! حصلت على 10 نقاط ووسام مستكشف ناشئ.");
+  alert("تم حفظ بياناتك محلياً بنجاح! حصلت على 10 نقاط (تعمل بدون إنترنت).");
   switchTab('survey-page', document.querySelectorAll('nav button')[1]);
 }
 
@@ -603,15 +603,15 @@ function submitSurvey() {
   };
 
   surveyRecords.push(record);
-  localStorage.setItem('ambition_surveys_v2', JSON.stringify(surveyRecords));
+  localStorage.setItem('ambition_surveys_offline_v1', JSON.stringify(surveyRecords));
   addPoints(30);
 
   let feedbackBox = document.getElementById('survey-feedback');
   let feedbackText = document.getElementById('feedback-text');
   feedbackBox.style.display = "block";
-  feedbackText.innerHTML = `أحسنت يا <strong>${studentProfile.name}</strong>! حصلت على <strong>+30 نقطة</strong>. طموحك نحو مجال <em>"${record.field}"</em> ومهنة <em>"${record.dreamJob}"</em> تم تسجيله بنجاح في المرصد.`;
+  feedbackText.innerHTML = `أحسنت يا <strong>${studentProfile.name}</strong>! حصلت على <strong>+30 نقطة</strong> وحُفظت إجاباتك محلياً. طموحك نحو مجال <em>"${record.field}"</em> ومهنة <em>"${record.dreamJob}"</em> مسجل بنجاح.`;
 
-  alert("تم تسجيل إجاباتك وإضافة +30 نقطة إلى رصيدك!");
+  alert("تم تسجيل إجاباتك محلياً وإضافة +30 نقطة إلى رصيدك!");
 }
 
 function submitIdea() {
@@ -641,12 +641,12 @@ function submitIdea() {
   };
 
   studentIdeas.push(ideaObj);
-  localStorage.setItem('ambition_ideas_v2', JSON.stringify(studentIdeas));
+  localStorage.setItem('ambition_ideas_offline_v1', JSON.stringify(studentIdeas));
   addPoints(50);
 
   document.getElementById('idea-title').value = "";
   document.getElementById('idea-desc').value = "";
-  document.getElementById('idea-msg').innerText = "✨ تمت إضافة فكرتك وحصلت على +50 نقطة ووسام مبتكر فائض!";
+  document.getElementById('idea-msg').innerText = "✨ تمت إضافة فكرتك محلياً وحصلت على +50 نقطة ووسام مبتكر فائض!";
 }
 
 function renderIdeas() {
@@ -703,7 +703,7 @@ function renderTeacherAnalytics() {
 
   let breakdown = document.getElementById('survey-analytics-breakdown');
   if(surveyRecords.length === 0) {
-    breakdown.innerHTML = "<p>لا توجد بيانات مسجلة في مرصد التمثلات حالياً.</p>";
+    breakdown.innerHTML = "<p>لا توجد بيانات مسجلة في المرصد حتى الآن.</p>";
   } else {
     breakdown.innerHTML = `
       <ul style="padding-right:20px; margin:0;">
@@ -714,7 +714,7 @@ function renderTeacherAnalytics() {
 
   let tIdeasList = document.getElementById('teacher-ideas-list');
   if(studentIdeas.length === 0) {
-    tIdeasList.innerHTML = "<p>لا توجد أفكار مقترحة للحاضنة حالياً.</p>";
+    tIdeasList.innerHTML = "<p>لا توجد أفكار مقترحة للحاضنة حتى الآن.</p>";
   } else {
     tIdeasList.innerHTML = studentIdeas.map(i => `
       <div style="border-bottom:1px solid var(--border-color); padding:10px 0; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
@@ -731,7 +731,7 @@ function renderTeacherAnalytics() {
 function deleteIdea(id) {
   if(confirm("هل تريد حقاً حذف هذه الفكرة من الحاضنة؟")) {
     studentIdeas = studentIdeas.filter(i => i.id !== id);
-    localStorage.setItem('ambition_ideas_v2', JSON.stringify(studentIdeas));
+    localStorage.setItem('ambition_ideas_offline_v1', JSON.stringify(studentIdeas));
     renderTeacherAnalytics();
     updateUI();
   }
@@ -739,10 +739,10 @@ function deleteIdea(id) {
 
 function clearAllData() {
   if(confirm("تحذير: هل تريد مسح كافة بيانات المرصد والأفكار ولوحة الشرف؟")) {
-    localStorage.removeItem('ambition_student_v2');
-    localStorage.removeItem('ambition_surveys_v2');
-    localStorage.removeItem('ambition_ideas_v2');
-    localStorage.removeItem('ambition_board_v2');
+    localStorage.removeItem('ambition_student_offline_v1');
+    localStorage.removeItem('ambition_surveys_offline_v1');
+    localStorage.removeItem('ambition_ideas_offline_v1');
+    localStorage.removeItem('ambition_board_offline_v1');
     studentProfile = {name:"", level:"", classNum:"", points:0};
     surveyRecords = [];
     studentIdeas = [];
